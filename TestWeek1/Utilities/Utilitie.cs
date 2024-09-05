@@ -42,7 +42,7 @@ namespace TestWeek1
                 }
                 foreach (string defence in defences)
                 {
-                    Console.WriteLine(defence);
+                    Console.WriteLine($"threat: {threat.ThreatType}, defence: {defence}");
                     Thread.Sleep(2000);
                 }
 

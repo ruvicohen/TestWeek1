@@ -40,7 +40,7 @@ namespace TestWeek1
 
             // Print a message and the in-order list of the balanced tree
             Console.WriteLine("\n\nBalance tree in order list\n\n");
-            Console.WriteLine(string.Join(",", inOrder));
+            Console.WriteLine(string.Join(Environment.NewLine, inOrder));
 
             Thread.Sleep(4000);
 
@@ -62,11 +62,8 @@ namespace TestWeek1
             // Get the list of nodes in pre-order traversal from the balanced tree
             List<Node> preOrder = tree.PreOrder();
 
-            // Print the pre-order list of the balanced tree
-            Console.WriteLine(string.Join(",", preOrder));
-
             // Write the updated threats to a new JSON file
-            JsonUtilities.WriteToJsonFileAsync("../../../Json/newThreats.json", threats);
+            JsonUtilities.WriteToJsonFileAsync("../../../Json/newBalanceTree.json", preOrder);
         }
     }
 }
