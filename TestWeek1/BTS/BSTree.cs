@@ -74,21 +74,25 @@ namespace TestWeek1
 
             return Search(node.Right, severity);
         }
+
         public int FindMinSeverity()
         {
             return FindMinSeverity(Root);
         }
+
         public int FindMinSeverity(Node node)
         {
             if (node == null)
                 return int.MaxValue;
             return node.Left == null ? node.MinSeverity : FindMinSeverity(node.Left);
         }
+
         public List<Node> InOrder()
         {
             List<Node> nodes = new List<Node>();
             return InOrder(Root, nodes);
         }
+
         public List<Node> InOrder(Node node, List<Node> nodes)
         {
             if (node != null)
@@ -105,6 +109,7 @@ namespace TestWeek1
             List<Node> nodes = new List<Node>();
             return PreOrder(Root, nodes);
         }
+
         public List<Node> PreOrder(Node node, List<Node> nodes)
         {
             if (node != null)
@@ -115,6 +120,7 @@ namespace TestWeek1
             }
             return nodes;
         }
+
         public int GetHeight(Node node)
         {
             if (node == null) return -1;
